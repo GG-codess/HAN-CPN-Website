@@ -23,7 +23,7 @@ body {
 =================================*/
 header {
     position: fixed;
-    width: 100%;
+    width: 80%;
     padding: 25px 8%;
     display: flex;
     justify-content: space-between;
