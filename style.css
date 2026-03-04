@@ -1,3 +1,6 @@
+:root {
+    --accent: #7a00ff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -68,8 +71,7 @@ header a {
 
 .brand:hover {
     background: #111;
-    transform: translateY(-5px);
-    cursor: pointer;
+    border-color: var(--accent);
 }
 
 .gallery {
