@@ -18,6 +18,7 @@ header {
     justify-content: space-between;
     background: rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 header a {
@@ -35,6 +36,7 @@ header a {
     align-items: center;
     background: linear-gradient(to bottom, #000, #111);
     text-align: center;
+    margin-top: 60px;
 }
 
 .hero h1 {
@@ -67,6 +69,7 @@ header a {
 .brand:hover {
     background: #111;
     transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .gallery {
@@ -88,6 +91,7 @@ header a {
 
 .img-box:hover {
     background: #1a1a1a;
+    cursor: pointer;
 }
 
 footer {
