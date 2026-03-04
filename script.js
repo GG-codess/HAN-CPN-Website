@@ -6,14 +6,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: "smooth" });
         }
     });
-});
-const brands = document.querySelectorAll(".brand");
-
-window.addEventListener("scroll", () => {
-  brands.forEach(brand => {
-    const top = brand.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      brand.classList.add("show");
-    }
-  });
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
 });
