@@ -1,47 +1,188 @@
-.gallery-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* ===============================
+   RESET
+=================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.hero-title {
-    font-size: 2.5rem;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+header {
+    position: fixed;
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #9b5cff;
+}
+
+/* ===============================
+   HERO (CINEMATIC)
+=================================*/
+.hero {
+    height: 100vh;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.hero-title.responsive {
-    font-size: 1.5rem;
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
 }
 
-:focus {
-    outline: 2px solid #0066cc;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.5s ease forwards;
+    opacity: 0;
 }
 
-header {
-    background-color: #fff;
-    padding: 1rem;
+.hero h1 {
+    font-size: 6rem;
+    letter-spacing: 10px;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(155, 92, 255, 0.5);
 }
 
-header nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+.hero p {
+    margin-top: 20px;
+    letter-spacing: 4px;
+    opacity: 0.8;
 }
 
-header nav a:hover {
-    background-color: #f0f0f0;
+/* ===============================
+   SECTIONS
+=================================*/
+.section {
+    padding: 160px 8%;
 }
+
+.section h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin-bottom: 80px;
+}
+
+/* ===============================
+   BRAND GRID
+=================================*/
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+}
+
+.brand {
+    border: 1px solid #222;
+    padding: 60px 40px;
+    transition: 0.5s ease;
+    background: #111;
+}
+
+.brand:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgba(155, 92, 255, 0.3);
+}
+
+.brand h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+/* ===============================
+   GALLERY
+=================================*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.img-box {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
 .img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.brand {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.6s ease;
+    transition: 0.7s ease;
 }
 
-.brand.show {
-    opacity: 1;
-    transform: translateY(0);
+.img-box:hover img {
+    transform: scale(1.15);
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+footer {
+    padding: 80px 8%;
+    text-align: center;
+    background: #000;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* ===============================
+   ANIMATIONS
+=================================*/
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
