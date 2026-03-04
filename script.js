@@ -7,3 +7,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+const brands = document.querySelectorAll(".brand");
+
+window.addEventListener("scroll", () => {
+  brands.forEach(brand => {
+    const top = brand.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      brand.classList.add("show");
+    }
+  });
+});
