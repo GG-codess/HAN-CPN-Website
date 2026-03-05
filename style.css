@@ -153,14 +153,16 @@ nav a:hover {
 /* Main Brand Card */
 .brand {
     position: relative;
-    height: 40px;
+    border: 1px solid #222;
     padding: 40px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 10px;
     overflow: hidden;
-    transition: 0.6s ease;
+    transition: 0.4s ease;
+
     background-size: cover;
     background-position: center;
 }
