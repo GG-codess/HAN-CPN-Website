@@ -245,3 +245,177 @@ footer {
         opacity: 1;
     }
 }
+/* ===============================
+   FULL RESPONSIVE SYSTEM
+=================================*/
+
+/* ------------------------------
+   LARGE SCREENS (1200px+)
+------------------------------ */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 6rem;
+    }
+
+    .section {
+        padding: 180px 10%;
+    }
+}
+
+
+/* ------------------------------
+   LAPTOPS (992px – 1199px)
+------------------------------ */
+@media (max-width: 1199px) {
+
+    .hero h1 {
+        font-size: 4.5rem;
+        letter-spacing: 8px;
+    }
+
+    .section {
+        padding: 140px 8%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+
+/* ------------------------------
+   TABLETS (768px – 991px)
+------------------------------ */
+@media (max-width: 991px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+        letter-spacing: 6px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 120px 6%;
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+
+    .brand-grid {
+        gap: 40px;
+    }
+
+    .brand {
+        height: 350px;
+    }
+
+    .gallery {
+        gap: 30px;
+    }
+
+    .img-box {
+        height: 350px;
+    }
+}
+
+
+/* ------------------------------
+   PHONES (Under 768px)
+------------------------------ */
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        letter-spacing: 4px;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .section {
+        padding: 100px 5%;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+
+    .brand {
+        height: 300px;
+        padding: 30px;
+    }
+
+    .brand h3 {
+        font-size: 1.3rem;
+    }
+
+    .brand p {
+        font-size: 0.8rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .img-box {
+        height: 280px;
+    }
+
+    footer {
+        padding: 60px 5%;
+    }
+}
+
+
+/* ------------------------------
+   SMALL PHONES (Under 480px)
+------------------------------ */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .brand {
+        height: 260px;
+    }
+
+    .img-box {
+        height: 220px;
+    }
+}
