@@ -152,7 +152,7 @@ nav a:hover {
 /* Main Brand Card */
 .brand {
     position: relative;
-    height: 420px;
+    aspect-ratio: 1 / 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
