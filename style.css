@@ -161,7 +161,7 @@ nav a:hover {
     overflow: hidden;
     transition: 0.6s ease;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 /* Dark cinematic overlay */
