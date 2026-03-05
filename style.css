@@ -97,18 +97,49 @@ nav a:hover {
 }
 
 /* ===============================
-   SECTIONS
+   CREATIVE DIVISION (IMAGE BACKGROUND)
 =================================*/
-.section {
-    padding: 160px 8%;
+.creative-section {
+    position: relative;
+    background: url("images/creative.jpg") center/cover no-repeat;
+    color: white;
+    overflow: hidden;
 }
 
-.section h2 {
-    font-size: 3rem;
-    letter-spacing: 6px;
-    margin-bottom: 80px;
+/* Cinematic overlay */
+.creative-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.85)
+    );
+    z-index: 1;
 }
 
+/* Keep text above overlay */
+.creative-section h2,
+.creative-section h3,
+.creative-section p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Typography polish */
+.creative-section h3 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.creative-section p {
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
 /* ===============================
    BRAND GRID (IMAGE VERSION)
 =================================*/
