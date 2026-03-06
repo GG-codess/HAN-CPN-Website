@@ -40,7 +40,7 @@ header.scrolled {
 .logo {
     font-size: 1.8rem;
     font-weight: 900;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 
 nav a {
@@ -114,56 +114,26 @@ nav a:hover {
 =================================*/
 .brand-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
 }
 
 .brand {
-    position: relative;
-    height: 350px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.4s ease;
+    border: 1px solid #222;
+    padding: 60px 40px;
+    transition: 0.5s ease;
+    background: #111;
 }
 
-/* Background overlay */
-.brand::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 1;
-}
-
-/* Text above overlay */
-.brand h3,
-.brand p {
-    position: relative;
-    z-index: 2;
-}
-
-/* Hover effect */
 .brand:hover {
-    transform: scale(1.05);
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgba(155, 92, 255, 0.3);
 }
 
-/* Background Images */
-.brand1 {
-    background: url("images/han.jpg") center/cover no-repeat;
-}
-
-.brand2 {
-    background: url("images/091021.jpg") center/cover no-repeat;
-}
-
-.brand3 {
-    background: url("images/mandelas.jpg") center/cover no-repeat;
+.brand h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
 }
 
 /* ===============================
@@ -171,12 +141,12 @@ nav a:hover {
 =================================*/
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
 }
 
 .img-box {
-    height: 250px;
+    height: 450px;
     overflow: hidden;
     position: relative;
 }
