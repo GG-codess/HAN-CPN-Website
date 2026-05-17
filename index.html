@@ -13,7 +13,7 @@
     <div class="logo" onclick="scrollToSection('house')" style="cursor: pointer;">HAN CPN</div>
 
     <nav id="nav-menu">
-        <a href="#house" onclick="openBrand('hancpn'); return false;">The House</a>
+        <a href="#house" onclick="scrollToSection('house'); return false;">The House</a>
         <a href="#creative">Creative</a>
         <a href="#lookbook">Lookbook</a>
         <a href="#contact">Contact</a>
@@ -96,9 +96,20 @@
 
 <script>
     function openBrand(brandName) {
-        console.log('Opening brand: ' + brandName);
-        // You can add page navigation logic here
-        // Example: window.location.href = brandName + '.html';
+        // Navigate to the appropriate collection page
+        switch(brandName) {
+            case 'hancpn':
+                window.location.href = 'hancpn.html';
+                break;
+            case '091021':
+                window.location.href = '091021.html';
+                break;
+            case 'mandelas':
+                window.location.href = 'mandelas.html';
+                break;
+            default:
+                console.log('Opening brand: ' + brandName);
+        }
     }
 
     function scrollToSection(sectionId) {
