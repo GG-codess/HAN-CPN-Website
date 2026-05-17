@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>091021 | Shopping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="collection.css">
+</head>
+<body>
+
+<!-- Header with Navigation -->
+<div class="collection-header">
+    <div class="logo" onclick="goHome()">HAN CPN</div>
+    <div class="collection-nav">
+        <a href="index.html">← Back Home</a>
+        <div class="cart-icon" onclick="openCart()">
+            🛒
+            <div class="cart-count">0</div>
+        </div>
+    </div>
+</div>
+
+<!-- Collection Section -->
+<div class="collection-container">
+    <div class="collection-header-section">
+        <h1>091021</h1>
+        <p>Elevated streetwear exploring form and presence.</p>
+    </div>
+    
+    <div class="products-grid">
+        <!-- Products will be loaded here by JavaScript -->
+    </div>
+</div>
+
+<!-- Product Details Modal -->
+<div id="productModal" class="modal"></div>
+
+<!-- Shopping Cart Sidebar -->
+<div class="cart-sidebar">
+    <div class="cart-header">
+        BASKET
+        <div class="cart-close" onclick="closeCart()">×</div>
+    </div>
+    
+    <div class="cart-items">
+        <div class="empty-cart">Your basket is empty</div>
+    </div>
+    
+    <div class="cart-summary"></div>
+    
+    <button class="checkout-btn" onclick="proceedToCheckout()" style="display: none;">PROCEED TO CHECKOUT</button>
+    <button class="continue-shopping" onclick="closeCart()">CONTINUE SHOPPING</button>
+</div>
+
+<script src="collection.js"></script>
+
+</body>
+</html>
