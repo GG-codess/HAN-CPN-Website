@@ -1,4 +1,4 @@
-// Product Database
+// Product Database with Images
 const productDatabase = {
     hancpn: [
         {
@@ -7,7 +7,7 @@ const productDatabase = {
             description: "Core identity streetwear tee. Premium cotton blend.",
             price: 299,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product1.jpg"
+            image: "images/hancpn-1.jpg"
         },
         {
             id: 2,
@@ -15,7 +15,7 @@ const productDatabase = {
             description: "Oversized hoodie with street aesthetic. Culture-driven design.",
             price: 649,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product2.jpg"
+            image: "images/hancpn-2.jpg"
         },
         {
             id: 3,
@@ -23,7 +23,7 @@ const productDatabase = {
             description: "Comfortable streetwear joggers. Perfect fit.",
             price: 549,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product3.jpg"
+            image: "images/hancpn-3.jpg"
         },
         {
             id: 4,
@@ -31,7 +31,7 @@ const productDatabase = {
             description: "Structured cap with embroidered logo. One size fits all.",
             price: 249,
             sizes: ["ONE SIZE"],
-            image: "product4.jpg"
+            image: "images/hancpn-4.jpg"
         },
         {
             id: 5,
@@ -39,7 +39,7 @@ const productDatabase = {
             description: "Lightweight jacket. Street-rooted design aesthetic.",
             price: 899,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product5.jpg"
+            image: "images/hancpn-5.jpg"
         },
         {
             id: 6,
@@ -47,7 +47,7 @@ const productDatabase = {
             description: "Premium socks. Comfortable everyday wear.",
             price: 99,
             sizes: ["ONE SIZE"],
-            image: "product6.jpg"
+            image: "images/hancpn-6.jpg"
         }
     ],
     "091021": [
@@ -57,7 +57,7 @@ const productDatabase = {
             description: "Elevated streetwear jacket. Exploring form and presence.",
             price: 1299,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product1.jpg"
+            image: "images/091021-1.jpg"
         },
         {
             id: 2,
@@ -65,7 +65,7 @@ const productDatabase = {
             description: "Refined button-up shirt. Premium fabric.",
             price: 699,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product2.jpg"
+            image: "images/091021-2.jpg"
         },
         {
             id: 3,
@@ -73,7 +73,7 @@ const productDatabase = {
             description: "Sleeveless form-fitting vest. Modern silhouette.",
             price: 549,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product3.jpg"
+            image: "images/091021-3.jpg"
         },
         {
             id: 4,
@@ -81,7 +81,7 @@ const productDatabase = {
             description: "Premium tailored trousers. Refined fit.",
             price: 899,
             sizes: ["28", "30", "32", "34", "36", "38"],
-            image: "product4.jpg"
+            image: "images/091021-4.jpg"
         },
         {
             id: 5,
@@ -89,7 +89,7 @@ const productDatabase = {
             description: "Knit sweater exploring contemporary form.",
             price: 799,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product5.jpg"
+            image: "images/091021-5.jpg"
         },
         {
             id: 6,
@@ -97,7 +97,7 @@ const productDatabase = {
             description: "Curated accessories collection.",
             price: 399,
             sizes: ["ONE SIZE"],
-            image: "product6.jpg"
+            image: "images/091021-6.jpg"
         }
     ],
     mandelas: [
@@ -107,7 +107,7 @@ const productDatabase = {
             description: "Refined silhouettes with heritage influence. Pretoria rooted.",
             price: 1299,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product1.jpg"
+            image: "images/mandelas-1.jpg"
         },
         {
             id: 2,
@@ -115,7 +115,7 @@ const productDatabase = {
             description: "Premium tailored blazer. Sophisticated elegance.",
             price: 1199,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product2.jpg"
+            image: "images/mandelas-2.jpg"
         },
         {
             id: 3,
@@ -123,7 +123,7 @@ const productDatabase = {
             description: "Elegant maxi skirt. Timeless design.",
             price: 899,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product3.jpg"
+            image: "images/mandelas-3.jpg"
         },
         {
             id: 4,
@@ -131,7 +131,7 @@ const productDatabase = {
             description: "Tailored trousers with refined details.",
             price: 799,
             sizes: ["28", "30", "32", "34", "36", "38"],
-            image: "product4.jpg"
+            image: "images/mandelas-4.jpg"
         },
         {
             id: 5,
@@ -139,7 +139,7 @@ const productDatabase = {
             description: "Sophisticated statement blouse. Premium fabrics.",
             price: 699,
             sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-            image: "product5.jpg"
+            image: "images/mandelas-5.jpg"
         },
         {
             id: 6,
@@ -147,7 +147,7 @@ const productDatabase = {
             description: "Signature collection scarf. Luxury material.",
             price: 449,
             sizes: ["ONE SIZE"],
-            image: "product6.jpg"
+            image: "images/mandelas-6.jpg"
         }
     ]
 };
@@ -183,14 +183,16 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
 });
 
-// Load Products
+// Load Products with Images
 function loadProducts(brand) {
     const grid = document.querySelector('.products-grid');
     const products = productDatabase[brand];
     
     grid.innerHTML = products.map(product => `
         <div class="product-card" onclick="openProductModal(${product.id}, '${brand}')">
-            <div class="product-image"></div>
+            <div class="product-image-wrapper">
+                <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='images/placeholder.jpg'">
+            </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 <div class="product-description">${product.description}</div>
@@ -221,7 +223,9 @@ function openProductModal(productId, brand) {
     modal.innerHTML = `
         <div class="modal-content">
             <div class="modal-close" onclick="closeProductModal()">×</div>
-            <div class="modal-image">📷 ${product.name}</div>
+            <div class="modal-image">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.jpg'">
+            </div>
             <div class="modal-info">
                 <div>
                     <div class="modal-name">${product.name}</div>
@@ -356,9 +360,6 @@ function updateCartDisplay() {
                 </div>
                 <div class="cart-item-price">R${item.price.toLocaleString()}</div>
                 <div class="cart-item-controls">
-                    <div class="cart-item-qty">
-                        <span class="qty-small-btn" onclick="removeFromCart(${index})">−</span>
-                    </div>
                     <button class="remove-btn" onclick="removeFromCart(${index})">REMOVE</button>
                 </div>
             </div>
